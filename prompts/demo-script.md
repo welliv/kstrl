@@ -38,21 +38,21 @@ Voiceover:
 ### 2. Analysis & Recommendation (30-60s)
 Kstrl runs:
 - Analyzes the task
-- Calls the OpenRouter MCP to list available models and pricing
+- Queries available provider data for model options and pricing
 - Scores options based on live data (intelligence vs. cost)
 - Recommends the best single model for the task
 
 On screen (clean text):
 **Recommendation**
-Model: [model returned by live OpenRouter lookup]
+Model: [model from live lookup]
 Task budget: $0.25
 
 Voiceover:
-"Kstrl evaluates live options from OpenRouter and recommends the single best model for this financial analysis task, with one clean task-level budget of $0.25."
+"Kstrl evaluates live options and recommends the single best model for this financial analysis task, with one clean task-level budget of $0.25."
 
 ### 3. Confirmation Step (60-75s)
 Kstrl (on screen + spoken):
-"Recommendation: Use [model returned by live OpenRouter lookup] with a task budget of $0.25.  
+"Recommendation: Use [model from live lookup] with a task budget of $0.25.  
 Shall I proceed by calling the mpp-agent skill to handle payment?"
 
 User: "Yes, proceed with payment using the mpp-agent skill."
