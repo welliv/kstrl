@@ -87,11 +87,24 @@ See `prompts/demo-script.md` for the 1–3 minute video script.
 
 ## Prerequisites
 - [Hermes Agent](https://github.com/NousResearch/hermes-agent)
-- `mpp-agent` skill
-- `stripe-link-cli` (test or production)
+- `mpp-agent` skill (payer-side wrapper)
+- `skillpay` server running at `http://localhost:4020`
+- `mppx` CLI at `/root/.hermes/node/bin/mppx`
 
-## Core team
-Built by **Welliv** for the Hermes Agent Accelerated Business Hackathon (NVIDIA × Stripe × Nous Research).
+## Architecture
+
+```
+kstrl (this skill)
+  → analyzes task, recommends model + budget
+  → asks one confirmation
+  → calls mpp-agent skill
+      → runs mppx CLI against skillpay server
+      → skillpay server: 402 + Stripe PaymentIntent + verify
+      → returns "access granted"
+  → executes with unlocked model
+```
+
+The payment layer is real and running in this environment. `mpp-agent` wraps the existing `mppx` CLI and `skillpay` Express server.
 
 ## Repository structure
 
