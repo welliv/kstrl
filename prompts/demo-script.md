@@ -38,21 +38,21 @@ Voiceover:
 ### 2. Analysis & Recommendation (30-60s)
 Kstrl runs:
 - Analyzes the task
-- Pulls live model data and pricing from available sources
-- Scores options using Nemotron 3 Ultra (intelligence vs. cost)
-- Recommends a single strong model
+- Calls the OpenRouter MCP to list available models and pricing
+- Scores options based on live data (intelligence vs. cost)
+- Recommends the best single model for the task
 
 On screen (clean text):
 **Recommendation**
-Model: NVIDIA Nemotron 3 Ultra (or equivalent high-reasoning configuration)
+Model: [model returned by live OpenRouter lookup]
 Task budget: $0.25
 
 Voiceover:
-"Kstrl evaluates options and recommends the single best model for this financial analysis task, with one clean task-level budget of $0.25."
+"Kstrl evaluates live options from OpenRouter and recommends the single best model for this financial analysis task, with one clean task-level budget of $0.25."
 
 ### 3. Confirmation Step (60-75s)
 Kstrl (on screen + spoken):
-"Recommendation: Use NVIDIA Nemotron 3 Ultra with a task budget of $0.25.  
+"Recommendation: Use [model returned by live OpenRouter lookup] with a task budget of $0.25.  
 Shall I proceed by calling the mpp-agent skill to handle payment?"
 
 User: "Yes, proceed with payment using the mpp-agent skill."
@@ -81,7 +81,7 @@ Kstrl:
 
 [Show side-by-side or before/after]
 - Baseline (weaker/default model): shallower analysis, missed key implications
-- With paid Nemotron-class model: deeper insights, clear risks vs. opportunities, better structure, specific numbers cited
+- With paid model: deeper insights, clear risks vs. opportunities, better structure, specific numbers cited
 
 Voiceover:
 "With access to the optimal model, Kstrl delivers clearly superior results."

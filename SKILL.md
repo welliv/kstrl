@@ -32,7 +32,7 @@ Kstrl turns model access from manual key management into an intelligent, pay-per
 
 ## Core Flow (Hackathon / Demo Scope)
 1. **Analyze** the task requirements, complexity, domain, and success criteria.
-2. **Discover & Score** live models and pricing from MPP-enabled providers (using tools + a strong evaluation model such as Nemotron 3 Ultra when available).
+2. **Discover & Score** live models and pricing by calling the **OpenRouter MCP** (`composio_openrouter_list_models` or equivalent). Evaluate options on intelligence vs. cost using the live data returned.
 3. **Recommend**: Propose the single best model (or custom MoA when clearly beneficial) plus one clean task-level budget.
 4. **Confirm**: Ask the user once for confirmation on the budget.
 5. **Pay**: After confirmation, call the existing `mpp-agent` skill to pay the MPP-protected URL for the chosen model.
@@ -40,6 +40,7 @@ Kstrl turns model access from manual key management into an intelligent, pay-per
 7. **Learn (light)**: Optionally note the successful paid configuration for future reuse.
 
 ## Demo Focus (1-3 Minutes)
+- Live OpenRouter MCP call visible (list models + pricing).
 - Clean single-model recommendation + task budget.
 - One explicit confirmation step.
 - Real MPP payment via mpp-agent (visible 402 + success).
@@ -47,10 +48,11 @@ Kstrl turns model access from manual key management into an intelligent, pay-per
 - Clear benefit to model providers.
 
 ## Integration Points
+- **OpenRouter MCP**: For live model discovery, pricing, and capability lookup.
 - **mpp-agent**: For real payment against MPP-protected model endpoints.
 - **Mixture of Agents (MoA)**: Supported in logic; custom presets mentioned but not the primary demo focus.
-- **Nemotron 3 Ultra**: Used for high-quality scoring and decision making (NVIDIA alignment).
-- **OpenRouter / MPP providers**: Source of discoverable protected models.
+- **NVIDIA alignment**: Decision logic is designed to run on strong evaluation models (e.g. Nemotron-class via OpenRouter when available).
+- **MPP providers**: Source of discoverable protected models.
 
 ## Current Status
 - Core analysis, recommendation, and payment handoff logic validated in testing.

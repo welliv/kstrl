@@ -13,7 +13,7 @@ Kstrl is the **autonomous decision + payment layer** on the agent side:
 
 1. Receives a complex task.
 2. Discovers available MPP-protected models and their pricing.
-3. Scores options (using strong models like Nemotron) and decides the optimal single model or custom MoA configuration.
+3. Scores options (using live data from OpenRouter MCP) and decides the optimal single model or custom MoA configuration.
 4. **Autonomously pays** the protected URL(s) via the mpp-agent skill.
 5. Gains access and executes the task with the chosen intelligence.
 6. (Optional) Saves the successful paid configuration for reuse.

@@ -73,7 +73,7 @@ Built for the Hermes Agent Accelerated Business Hackathon presented by NVIDIA ×
 - Agents that **earn** and **spend** real value
 - **Real operations at scale** via autonomous multi-step agent workflows
 - **Stripe Skills for Hermes** integration (`mpp-agent`, `stripe-link-cli`)
-- **NVIDIA alignment**: Nemotron-3-Ultra for decision making, NemoClaw policy mapping
+- **OpenRouter MCP integration**: Live model discovery, pricing lookup, and dynamic capability scoring via OpenRouter tools
 
 ### Core flow
 Analyze → Recommend + Budget → Confirm → Pay (MPP) → Execute
