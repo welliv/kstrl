@@ -57,6 +57,8 @@ Kstrl turns model access from manual key management into an intelligent, pay-per
 ## Current Status
 - Core analysis, recommendation, and payment handoff logic validated in testing.
 - Strong alignment with model provider acceleration via MPP.
+- **Verified**: mpp-agent skill callable, skillpay server healthy on localhost:4020, mppx CLI present, test Stripe keys configured.
+- **Not wired**: OpenRouter MCP and stripe-link-cli are not configured in this environment. Live provider data is used when available; otherwise fall back to best available data.
 
 Kstrl turns model access from manual key management into an intelligent, pay-per-use capability.
 

@@ -118,7 +118,18 @@ The payment layer is real and running in this environment. `mpp-agent` wraps the
 | `library/` | Example saved configuration preset |
 
 ## Current status
-Validated through Phase 1 and Phase 2 testing: dry-run recommendation → explicit confirmation → mpp-agent payment handoff. Core loop is stable and demo-ready. A 1–3 minute video following `prompts/demo-script.md` is the recommended next step.
+**Verified working in this environment:**
+- `mpp-agent` skill installed and callable (v0.1.0)
+- `skillpay` server running on `localhost:4020` with 3 skills and 3 budgets tracked
+- `mppx` CLI present (v0.7.0) for MPP payments
+- Test Stripe keys configured (`pk_test_...` / `sk_test_...`)
+- Full MPP/402 flow is real: model discovery → budget check → Stripe PaymentIntent → payment → access grant
+
+**Aspirational / not yet wired:**
+- OpenRouter MCP integration: referenced in prompts but the Composio MCP server block is not present in `config.yaml`. Live provider data is used when available, but OpenRouter-specific tool calls require explicit MCP setup.
+- `stripe-link-cli`: not on PATH; not required for the current test-mode flow but mentioned in older docs.
+
+Core loop is stable and demo-ready. A 1–3 minute video following `prompts/demo-script.md` is the recommended next step.
 
 ## Why MPP?
 MPP (Machine Payments Protocol) lets agents pay providers directly without API keys or manual billing. Model providers implement it once; agents handle discovery, evaluation, and payment autonomously. This repo demonstrates that pattern end-to-end.
