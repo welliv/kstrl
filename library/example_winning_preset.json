@@ -1,0 +1,19 @@
+{
+  "id": "financial-forecast-v1",
+  "task_type": "financial analysis + 3-year forecast",
+  "created": "2026-06-27",
+  "config": {
+    "type": "moa",
+    "preset_name": "financial-forecast-v1",
+    "models": [
+      {"role": "primary_reasoner", "provider": "openrouter", "model": "anthropic/claude-opus-4.8"},
+      {"role": "verifier", "provider": "openrouter", "model": "deepseek/deepseek-v4-pro"},
+      {"role": "synthesizer", "provider": "openrouter", "model": "openai/gpt-4o"}
+    ],
+    "aggregator": "anthropic/claude-opus-4.8"
+  },
+  "actual_cost_usd": 4.80,
+  "outcome_notes": "Excellent depth on risks and opportunities. Caught two subtle accounting issues missed by single strong model. Forecast structure was professional.",
+  "recommended_for": ["financial reports", "due diligence", "complex forecasting"],
+  "publish_price": 2.50
+}

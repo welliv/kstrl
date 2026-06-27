@@ -1,0 +1,25 @@
+# Runtime / environment
+*.pyc
+__pycache__/
+.hermes/
+venv/
+.env
+.venv
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# Test artifacts
+tests/results.md
+
+# Media
+*.mp4
+*.mov
