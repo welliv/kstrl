@@ -9,13 +9,15 @@ category: meta
 
 # Kstrl
 
-Kstrl is an intelligent routing and payment layer for agents.
+*Like the kestrel it is named after, Kstrl maintains focused stillness while scanning the full landscape of models and pricing. Only when it has identified the single best path does it commit — either selecting the most effective model or composing a precise Mixture of Agents. It then captures the value through a clean MPP payment for exactly what the task requires.*
 
-**For model providers**: You only need to implement MPP once. Your models become protected HTTP resources. Agents discover them, pay on demand, and use them.
+**Problem:** When agents tackle complex tasks, choosing the right model setup is hard. Use something too weak and results suffer. Use something too powerful and money is wasted. APIs, keys, and subscriptions make this worse.
 
-**For agents**: Kstrl analyzes the task, recommends the single best model (or custom MoA when clearly beneficial) from MPP-enabled providers, proposes one clean task-level budget, waits for confirmation, pays autonomously via the `mpp-agent` skill, and executes with the unlocked resource.
+**Solution:** Kstrl analyzes what the task actually needs, evaluates current model options and pricing in real time, and recommends the most sensible setup — either the single best model or a custom Mixture of Agents when higher quality justifies the cost. Instead of many small payments or manual subscriptions, Kstrl recommends **one reasonable task budget** and pays via MPP after one confirmation.
 
-This removes API keys and subscriptions for providers while giving agents the ability to intelligently and autonomously acquire the right intelligence.
+Kstrl turns model access from manual key management into an intelligent, pay-per-use capability.
+
+**Kstrl exists to eliminate waste. Maximum intelligence. Minimum cost.**
 
 ## Value to Model Providers
 - Extremely low friction — implement MPP and your models are instantly usable by agents.

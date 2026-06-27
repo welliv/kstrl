@@ -1,17 +1,47 @@
 # Kstrl
 
-Intelligent routing and autonomous payment layer for agents.
+*Like a kestrel, Kstrl maintains focused stillness while scanning the full landscape of models and pricing — and only commits when it has identified the single best path.*
 
-## What it does
+Kstrl is an intelligent routing and autonomous payment layer for agents. It analyzes tasks in real time, evaluates model options and pricing across MPP-enabled providers, and recommends the most effective configuration — either a single strong model or a custom Mixture of Agents when higher quality justifies the cost.
 
-Kstrl analyzes a task, recommends the single best model (or a custom Mixture of Agents / MoA when clearly beneficial) from MPP-enabled providers, proposes one clean task-level budget, gets one confirmation, pays via the `mpp-agent` skill, and executes.
+Payment is handled through **one clean task-level budget via MPP** instead of many micro-payments. Kstrl handles the payment via `mpp-agent` after one simple confirmation, then executes with the unlocked resource.
 
-For model providers, it means implementing MPP once and having agents discover, evaluate, and pay for your models on demand.
+**The result:** maximum intelligence, minimum waste.
 
-## How it works
-Agents still struggle with manual API keys and subscriptions. Kstrl changes this for MPP-enabled providers: it intelligently selects the best model, proposes a task-level budget, pays autonomously via MPP, and executes — all after one simple confirmation.
+## What problem does this solve?
 
-**Flow:** Analyze task → Recommend best MPP model + budget → One confirmation → mpp-agent pays → Execute with access
+Choosing the right model for a hard task is currently expensive and risky:
+- **Too weak** → bad results, missed risks, shallow analysis
+- **Too strong or wrong setup** → you burn money on unnecessary compute
+- **Manual management** → API keys, subscriptions, multi-provider billing chaos
+
+Kstrl eliminates that friction. It replaces guesswork and manual key management with an autonomous economic decision: analyze → recommend → confirm → pay via MPP → execute.
+
+## Who is this for?
+
+| Audience | Value |
+|----------|-------|
+| **Agents / Teams** | Autonomous, intelligent model selection with predictable task budgets |
+| **Model Providers** | Implement MPP once, and your models become discoverable pay-per-use resources for agents |
+| **Enterprises** | High-performance AI without permanent seats or unpredictable micro-billing |
+
+## Core flow
+
+```
+Analyze task
+    ↓
+Gather live models + pricing
+    ↓
+Score intelligence vs cost
+    ↓
+Recommend best config + one task budget
+    ↓
+One confirmation
+    ↓
+mpp-agent pays protected endpoint
+    ↓
+Execute with access granted
+```
 
 ## Quick start
 
@@ -19,13 +49,17 @@ Agents still struggle with manual API keys and subscriptions. Kstrl changes this
 hermes --skills kstrl chat
 ```
 
-Then ask Kstrl to handle a task:
+Then give a task:
 
 ```
-Use Kstrl. Analyze this quarterly earnings report and highlight the key risks and opportunities for investors.
+Use Kstrl. Analyze this quarterly earnings report for risks and opportunities. Use the best possible reasoning.
 ```
 
-Kstrl will analyze, pull live model data, recommend the best single model + budget, ask for confirmation, hand off to `mpp-agent` for payment, and execute with the unlocked resource.
+Kstrl will analyze, pull live model data, recommend the best setup + budget, ask for one confirmation, hand off to `mpp-agent` for payment, and execute with the unlocked resource.
+
+## Demo
+
+See `prompts/demo-script.md` for the 1–3 minute hackathon video script.
 
 ## For enterprises
 
