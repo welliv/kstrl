@@ -126,8 +126,9 @@ The payment layer is real and running in this environment. `mpp-agent` wraps the
 - Full MPP/402 flow is real: model discovery → budget check → Stripe PaymentIntent → payment → access grant
 
 **Aspirational / not yet wired:**
-- OpenRouter MCP integration: referenced in prompts but the Composio MCP server block is not present in `config.yaml`. Live provider data is used when available, but OpenRouter-specific tool calls require explicit MCP setup.
-- `stripe-link-cli`: not on PATH; not required for the current test-mode flow but mentioned in older docs.
+- **OpenRouter MCP** — State: ❌ Not configured in `config.yaml`
+- **stripe-link-cli** — State: ❌ Not on PATH
+- **OpenRouter dynamic pricing lookup** — State: ❌ Not wired (references removed from prompts to stay honest)
 
 Core loop is stable and demo-ready. A 1–3 minute video following `prompts/demo-script.md` is the recommended next step.
 
